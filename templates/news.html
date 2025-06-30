@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Yangiliklar</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .news-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .news-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+
+        .news-date {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .news-body {
+            font-size: 15px;
+            color: #555;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Oxirgi Yangiliklar</h1>
+
+<div class="news-container">
+    <div class="news-card">
+        <div class="news-title">iPhone 16 taqdimoti sanasi e’lon qilindi</div>
+        <div class="news-date">2025-06-30</div>
+        <div class="news-body">
+            Apple kompaniyasi yangi iPhone 16 modelini avgust oyida taqdim etishini tasdiqladi. Yangi model ilg‘or kamera va batareya bilan bo‘ladi.
+        </div>
+    </div>
+
+    <div class="news-card">
+        <div class="news-title">Samsung Galaxy S25 sirlari oshkor bo‘ldi</div>
+        <div class="news-date">2025-06-28</div>
+        <div class="news-body">
+            Galaxy S25 flagman modeli Snapdragon 8 Gen 4 chipi bilan jihozlanishi aytilmoqda. Dizayni ham yangilangan.
+        </div>
+    </div>
+
+    <div class="news-card">
+        <div class="news-title">O‘zbekistonda 5G sinovlari boshlangan</div>
+        <div class="news-date">2025-06-25</div>
+        <div class="news-body">
+            UzMobile kompaniyasi Toshkent va Samarqandda 5G sinov tarmog‘ini ishga tushirdi. Natijalar ijobiy baholanmoqda.
+        </div>
+    </div>
+</div>
+
+<a href="{% url 'home' %}" class="back-home">← Bosh sahifaga qaytish</a>
+
+</body>
+</html>

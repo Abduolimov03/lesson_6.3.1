@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobil telefonlar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            color: #2c3e50;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: #555;
+        }
+
+        .price {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+          .home-button {
+           display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+
+  .home-button:hover {
+    background-color: #2980b9;
+  }
+    </style>
+</head>
+<body>
+
+    <h1>Mobil Telefonlar Ro'yxati</h1>
+    <a href="{% url 'home' %}" class="home-button">🏠 Home</a>
+
+
+
+    <div class="container">
+        {% for mobile in mobile %}
+            <div class="card">
+                <h2>{{ mobile.model }}</h2>
+                <p>Ishlab Chiqaruvchi: {{ mobile.brand }}</p>
+                <p>Texnik tavsifi: {{ mobile.description }}</p>
+                <div class="price">{{ mobile.price }} $</div>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

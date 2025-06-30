@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefonlar haqida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        .hero {
+            background-color: #ecf0f1;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .phones {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px 20px;
+        }
+
+        .phone-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 280px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .phone-card:hover {
+            transform: scale(1.05);
+        }
+
+        .phone-card h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .phone-card p {
+            font-size: 15px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .phones {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Telefonlar Olami</h1>
+    </header>
+
+    <nav>
+        <a href="#">Bosh sahifa</a>
+        <a href="{% url 'mobile' %}">Modellar</a>
+        <a href="{% url 'news' %}">Yangiliklar</a>
+        <a href="{% url 'contact' %}">Bog‘lanish</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Eng so‘nggi smartfonlar haqida</h1>
+        <p>Quyida mashhur modellarning qisqacha tavsifi keltirilgan.</p>
+    </div>
+
+    <div class="phones">
+        <div class="phone-card">
+            <h3>iPhone 14 Pro</h3>
+            <p>Apple’ning eng so‘nggi modeli. 48MP kamera, Dynamic Island dizayni va A16 chip bilan jihozlangan.</p>
+        </div>
+        <div class="phone-card">
+            <h3>Samsung Galaxy S24</h3>
+            <p>Samsung’dan kuchli flagman. AI funksiyalar, AMOLED displey va tezkor ishlash xususiyati.</p>
+        </div>
+        <div class="phone-card">
+            <h3>Xiaomi 14 Ultra</h3>
+            <p>Yuqori texnologiyali kamera, Leica optikasi va uzoq davom etuvchi batareya bilan jihozlangan.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Telefonlar Olami. Barcha huquqlar himoyalangan.
+    </footer>
+
+</body>
+</html>
